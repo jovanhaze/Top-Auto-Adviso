@@ -52,7 +52,7 @@ export default function ContactSection() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div>
-            <h3 className="text-2xl font-bold text-navy mb-6">Get In Touch</h3>
+            <h3 className="text-2xl font-bold text-navy mb-6">Contact Top Auto Advisors</h3>
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <Input

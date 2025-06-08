@@ -80,16 +80,18 @@ export default function About() {
             <div className="bg-light-gray p-8 rounded-lg">
               <h3 className="text-2xl font-bold text-navy mb-6">Our Mission</h3>
               <p className="text-gray-700 mb-6">
-                To empower first-time car buyers with the knowledge, tools, and support needed 
-                to make confident purchasing decisions while protecting them from dealer manipulation.
+                To empower first-time car buyers with industry expertise, protecting them from costly 
+                mistakes and dealer manipulation while ensuring they get the best possible deal.
               </p>
-              <div className="grid grid-cols-2 gap-4">
-                {stats.map((stat, index) => (
-                  <div key={index} className="text-center">
-                    <div className="text-2xl font-bold text-emerald">{stat.number}</div>
-                    <div className="text-sm text-gray-600">{stat.label}</div>
-                  </div>
-                ))}
+              <div className="space-y-4">
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-emerald">5+ Years</div>
+                  <div className="text-sm text-gray-600">Auto Finance Experience</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-navy">Nationwide</div>
+                  <div className="text-sm text-gray-600">Remote Service</div>
+                </div>
               </div>
             </div>
           </div>
@@ -137,13 +139,13 @@ export default function About() {
             <Card className="text-center">
               <CardContent className="p-6">
                 <div className="w-24 h-24 bg-gradient-to-br from-emerald to-emerald/80 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <span className="text-white text-2xl font-bold">CEO</span>
+                  <span className="text-white text-lg font-bold">JA</span>
                 </div>
-                <h3 className="font-semibold text-navy mb-2">Founder & Lead Advisor</h3>
-                <p className="text-emerald text-sm mb-3">10+ Years Automotive Experience</p>
+                <h3 className="font-semibold text-navy mb-2">Jovan Acosta</h3>
+                <p className="text-emerald text-sm mb-3">Founder & Lead Advisor</p>
                 <p className="text-gray-600 text-sm">
-                  Former automotive sales manager turned consumer advocate. Specializes in 
-                  contract negotiation and dealer relationship management.
+                  5+ years in auto finance, from customer service to collections. Specializes in 
+                  helping first-time buyers avoid costly mistakes and dealer manipulation.
                 </p>
               </CardContent>
             </Card>
