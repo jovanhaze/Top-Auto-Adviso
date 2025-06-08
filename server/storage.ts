@@ -85,9 +85,11 @@ export class MemStorage implements IStorage {
   async createDocumentUpload(insertDocumentUpload: InsertDocumentUpload): Promise<DocumentUpload> {
     const id = this.currentDocumentUploadId++;
     const documentUpload: DocumentUpload = { 
-      ...insertDocumentUpload, 
       id, 
-      createdAt: new Date() 
+      email: insertDocumentUpload.email,
+      notes: insertDocumentUpload.notes ?? null,
+      filenames: insertDocumentUpload.filenames ?? null,
+      createdAt: new Date()
     };
     this.documentUploads.set(id, documentUpload);
     return documentUpload;

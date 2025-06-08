@@ -13,19 +13,19 @@ const upload = multer({
   limits: {
     fileSize: 10 * 1024 * 1024, // 10MB limit
   },
-  fileFilter: (req, file, cb) => {
+  fileFilter: (req: any, file: any, cb: any) => {
     const allowedTypes = ['.pdf', '.doc', '.docx', '.jpg', '.jpeg', '.png'];
     const ext = path.extname(file.originalname).toLowerCase();
     if (allowedTypes.includes(ext)) {
       cb(null, true);
     } else {
-      cb(new Error('Invalid file type'), false);
+      cb(null, false);
     }
   }
 });
 
 // Configure nodemailer
-const transporter = nodemailer.createTransporter({
+const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
     user: process.env.GMAIL_USER || process.env.EMAIL_USER || "noreply@topautoadvisors.com",
@@ -104,7 +104,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   app.post("/api/upload-documents", upload.array('documents', 10), async (req, res) => {
     try {
       const { email, notes } = req.body;
-      const files = req.files as Express.Multer.File[];
+      const files = req.files as any[];
       
       if (!email) {
         return res.status(400).json({ message: "Email is required" });
