@@ -85,30 +85,28 @@ export default function Home() {
               Comprehensive car buying protection to save you thousands and protect you from dealer manipulation.
             </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <div className="text-center p-6 bg-light-gray rounded-lg">
-              <div className="w-12 h-12 bg-emerald/10 rounded-full flex items-center justify-center mx-auto mb-4">
+          <div className="grid md:grid-cols-2 gap-8 mb-12 max-w-4xl mx-auto">
+            <div className="text-center p-6 bg-light-gray rounded-lg relative">
+              <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                <span className="bg-yellow-400 text-navy px-3 py-1 rounded-full font-bold text-xs">50% OFF LAUNCH</span>
+              </div>
+              <div className="w-12 h-12 bg-emerald/10 rounded-full flex items-center justify-center mx-auto mb-4 mt-2">
                 <Shield className="h-6 w-6 text-emerald" />
               </div>
-              <h3 className="font-semibold text-navy mb-2">Pre-Purchase Inspection</h3>
-              <p className="text-gray-600 text-sm mb-4">Complete 200-point vehicle analysis before you buy</p>
-              <div className="text-2xl font-bold text-emerald">$149</div>
+              <h3 className="font-semibold text-navy mb-2">Personal Consulting</h3>
+              <p className="text-gray-600 text-sm mb-4">60-minute consultation with auto finance expert</p>
+              <div className="space-y-1">
+                <div className="text-2xl font-bold text-emerald">$49.99</div>
+                <div className="text-gray-400 line-through text-sm">Regular $99.99</div>
+              </div>
             </div>
             <div className="text-center p-6 bg-light-gray rounded-lg">
               <div className="w-12 h-12 bg-emerald/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Shield className="h-6 w-6 text-emerald" />
               </div>
-              <h3 className="font-semibold text-navy mb-2">Document Review</h3>
-              <p className="text-gray-600 text-sm mb-4">Expert analysis of contracts and paperwork</p>
-              <div className="text-2xl font-bold text-emerald">$99</div>
-            </div>
-            <div className="text-center p-6 bg-light-gray rounded-lg">
-              <div className="w-12 h-12 bg-emerald/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Shield className="h-6 w-6 text-emerald" />
-              </div>
-              <h3 className="font-semibold text-navy mb-2">Live Support</h3>
-              <p className="text-gray-600 text-sm mb-4">Real-time guidance during dealer visits</p>
-              <div className="text-2xl font-bold text-emerald">$199</div>
+              <h3 className="font-semibold text-navy mb-2">Contract Review</h3>
+              <p className="text-gray-600 text-sm mb-4">Digital contract analysis with key guidance</p>
+              <div className="text-2xl font-bold text-emerald">$25.00</div>
             </div>
           </div>
           <div className="text-center">

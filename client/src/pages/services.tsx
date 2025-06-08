@@ -7,64 +7,53 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 export default function Services() {
   const services = [
     {
-      title: "Pre-Purchase Vehicle Inspection",
-      description: "Complete 200-point inspection analysis before you buy",
-      icon: <Shield className="h-8 w-8 text-emerald" />,
-      features: [
-        "Engine and transmission evaluation",
-        "Safety systems check",
-        "Hidden damage detection",
-        "Market value assessment",
-        "Maintenance history review"
-      ],
-      price: "$149",
-      duration: "2-3 hours"
-    },
-    {
-      title: "Dealer Document Review",
-      description: "Expert analysis of all paperwork and contracts",
-      icon: <FileText className="h-8 w-8 text-emerald" />,
-      features: [
-        "Contract terms analysis",
-        "Hidden fee identification",
-        "Interest rate verification",
-        "Warranty review",
-        "Trade-in value assessment"
-      ],
-      price: "$99",
-      duration: "1-2 hours"
-    },
-    {
-      title: "Live Dealer Negotiation Support",
-      description: "Real-time guidance during your dealership visit",
+      title: "Personal Consulting Session",
+      description: "60-minute personalized consultation with auto finance expert",
       icon: <Phone className="h-8 w-8 text-emerald" />,
       features: [
-        "Phone support during negotiation",
-        "Price strategy coaching",
-        "Red flag alerts",
-        "Counter-offer guidance",
-        "Walk-away recommendations"
+        "60-minute Zoom consultation",
+        "Auto finance industry expertise",
+        "Dealer negotiation strategies", 
+        "Lawyer referrals when needed",
+        "Ongoing email support"
       ],
-      price: "$199",
-      duration: "Up to 4 hours"
+      price: "$49.99",
+      originalPrice: "$99.99",
+      duration: "60 minutes",
+      badge: "50% OFF LAUNCH"
+    },
+    {
+      title: "Contract Review Service",
+      description: "Digital contract analysis with key insights and guidance",
+      icon: <FileText className="h-8 w-8 text-emerald" />,
+      features: [
+        "Digital contract review",
+        "Key points identification",
+        "Important questions to ask dealer",
+        "Red flag detection",
+        "Clear guidance document"
+      ],
+      price: "$25.00",
+      duration: "Digital format required",
+      badge: null
     }
   ];
 
-  const addOns = [
+  const benefits = [
     {
-      title: "Extended Warranty Analysis",
-      description: "Detailed review of extended warranty options",
-      price: "$49"
+      title: "Industry Expertise",
+      description: "5+ years experience in auto finance and collections",
+      icon: <Shield className="h-6 w-6 text-emerald" />
     },
     {
-      title: "Financing Options Comparison",
-      description: "Compare dealer financing vs. external options",
-      price: "$79"
+      title: "Nationwide Service",
+      description: "Fully remote team available across the United States",
+      icon: <CheckCircle className="h-6 w-6 text-emerald" />
     },
     {
-      title: "Insurance Guidance",
-      description: "Recommendations for optimal coverage",
-      price: "$39"
+      title: "Lawyer Referrals",
+      description: "Access to qualified lemon law attorneys when needed",
+      icon: <DollarSign className="h-6 w-6 text-emerald" />
     }
   ];
 
@@ -98,9 +87,16 @@ export default function Services() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {services.map((service, index) => (
               <Card key={index} className="relative h-full">
+                {service.badge && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10">
+                    <span className="bg-yellow-400 text-navy px-4 py-2 rounded-full font-bold text-sm">
+                      {service.badge}
+                    </span>
+                  </div>
+                )}
                 <CardHeader className="text-center pb-4">
                   <div className="mx-auto mb-4 p-3 bg-emerald/10 rounded-full w-fit">
                     {service.icon}
@@ -113,6 +109,11 @@ export default function Services() {
                 <CardContent className="pt-0">
                   <div className="text-center mb-6">
                     <div className="text-3xl font-bold text-emerald mb-2">{service.price}</div>
+                    {service.originalPrice && (
+                      <div className="text-gray-400 line-through text-lg mb-2">
+                        Regular {service.originalPrice}
+                      </div>
+                    )}
                     <div className="text-sm text-gray-500 flex items-center justify-center gap-1">
                       <Clock className="h-4 w-4" />
                       {service.duration}
@@ -138,32 +139,52 @@ export default function Services() {
         </div>
       </section>
 
-      {/* Add-On Services */}
+      {/* Why Choose Us */}
       <section className="py-20 bg-light-gray">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-navy mb-4">Add-On Services</h2>
+            <h2 className="text-3xl font-bold text-navy mb-4">Why Choose Top Auto Advisors</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Enhance your protection with these specialized services that can be added 
-              to any core service package.
+              Founded by Jovan Acosta, bringing real-world auto finance experience 
+              to protect first-time car buyers nationwide.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
-            {addOns.map((addon, index) => (
-              <Card key={index}>
+          <div className="grid md:grid-cols-3 gap-8">
+            {benefits.map((benefit, index) => (
+              <Card key={index} className="text-center">
                 <CardContent className="p-6">
-                  <div className="flex items-center justify-between mb-4">
-                    <h3 className="font-semibold text-navy">{addon.title}</h3>
-                    <span className="text-emerald font-bold">{addon.price}</span>
+                  <div className="mx-auto mb-4 p-3 bg-emerald/10 rounded-full w-fit">
+                    {benefit.icon}
                   </div>
-                  <p className="text-gray-600 text-sm mb-4">{addon.description}</p>
-                  <Button variant="outline" size="sm" className="w-full">
-                    Add to Service
-                  </Button>
+                  <h3 className="font-semibold text-navy mb-3">{benefit.title}</h3>
+                  <p className="text-gray-600 text-sm">{benefit.description}</p>
                 </CardContent>
               </Card>
             ))}
+          </div>
+          
+          <div className="text-center mt-12">
+            <div className="bg-white rounded-xl p-8 max-w-2xl mx-auto">
+              <h3 className="text-2xl font-bold text-navy mb-4">Ready to Get Protected?</h3>
+              <p className="text-gray-600 mb-6">
+                Contact us directly or book your consultation online. As a fully remote team, 
+                we're available to help you nationwide.
+              </p>
+              <div className="grid md:grid-cols-2 gap-4 mb-6">
+                <div className="text-center">
+                  <p className="text-emerald font-bold text-lg">(937) 793-2179</p>
+                  <p className="text-gray-600 text-sm">Call us directly</p>
+                </div>
+                <div className="text-center">
+                  <p className="text-emerald font-bold text-lg">info@topautoadvisors.com</p>
+                  <p className="text-gray-600 text-sm">Email us anytime</p>
+                </div>
+              </div>
+              <Button className="bg-emerald hover:bg-emerald/90 text-white px-8 py-3">
+                Book Your Service Now
+              </Button>
+            </div>
           </div>
         </div>
       </section>

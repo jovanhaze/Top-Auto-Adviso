@@ -110,18 +110,38 @@ export default function ContactSection() {
               </div>
             </div>
             
-            <div className="space-y-4">
-              <div className="flex items-center space-x-3">
-                <Gavel className="text-emerald w-5 h-5" />
-                <span className="text-gray-700">Lemon law attorney referrals available</span>
+            <div className="space-y-6">
+              <div>
+                <h4 className="font-semibold text-navy mb-3">Contact Information</h4>
+                <div className="space-y-2">
+                  <div className="flex items-center space-x-3">
+                    <span className="text-emerald font-semibold">Phone:</span>
+                    <span className="text-gray-700">(937) 793-2179</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <span className="text-emerald font-semibold">Email:</span>
+                    <span className="text-gray-700">info@topautoadvisors.com</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <span className="text-emerald font-semibold">Service:</span>
+                    <span className="text-gray-700">Nationwide (Remote Team)</span>
+                  </div>
+                </div>
               </div>
-              <div className="flex items-center space-x-3">
-                <Shield className="text-emerald w-5 h-5" />
-                <span className="text-gray-700">Industry insider protection expertise</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <Handshake className="text-emerald w-5 h-5" />
-                <span className="text-gray-700">100% satisfaction guarantee</span>
+              
+              <div className="space-y-3">
+                <div className="flex items-center space-x-3">
+                  <Gavel className="text-emerald w-5 h-5" />
+                  <span className="text-gray-700">Lemon law attorney referrals available</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Shield className="text-emerald w-5 h-5" />
+                  <span className="text-gray-700">5+ years auto finance experience</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Handshake className="text-emerald w-5 h-5" />
+                  <span className="text-gray-700">Fully remote nomadic team</span>
+                </div>
               </div>
             </div>
           </div>

@@ -26,8 +26,8 @@ export default function HeroSection() {
                 Don't Get <span className="text-emerald-400">Scammed</span> On Your First Car
               </h1>
               <p className="text-xl text-blue-100 leading-relaxed">
-                Get insider protection from an auto finance expert who's seen every dealer trick in the book. 
-                Your $50 consultation could save you $10,000+ in hidden fees and lemon cars.
+                Get insider protection from Jovan Acosta, an auto finance expert with 5+ years industry experience. 
+                Your consultation could save you thousands in hidden fees and dealer manipulation.
               </p>
             </div>
             

@@ -28,10 +28,10 @@ export default function About() {
   ];
 
   const stats = [
-    { number: "500+", label: "Clients Protected" },
-    { number: "$2.4M", label: "Total Savings Generated" },
-    { number: "98%", label: "Client Satisfaction Rate" },
-    { number: "5+", label: "Years Experience" }
+    { number: "5+", label: "Years Auto Finance Experience" },
+    { number: "Nationwide", label: "Remote Service Coverage" },
+    { number: "Expert", label: "Industry Insider Knowledge" },
+    { number: "New", label: "Business Launch" }
   ];
 
   return (
@@ -198,9 +198,10 @@ export default function About() {
               <div className="w-16 h-16 bg-emerald/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Shield className="h-8 w-8 text-emerald" />
               </div>
-              <h3 className="font-semibold text-navy mb-3">Proven Track Record</h3>
+              <h3 className="font-semibold text-navy mb-3">Industry Expertise</h3>
               <p className="text-gray-600 text-sm">
-                Over 500 successful consultations with an average savings of $4,800 per client.
+                5+ years of real-world experience in auto finance and collections, 
+                with deep knowledge of dealer tactics and consumer protection.
               </p>
             </div>
 
