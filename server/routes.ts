@@ -158,6 +158,57 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // Booking submission
+  app.post("/api/booking", async (req, res) => {
+    try {
+      const bookingData = req.body;
+      
+      // Store booking (in a real app, you'd save to database)
+      console.log("New booking received:", bookingData);
+      
+      // Send confirmation email
+      try {
+        await transporter.sendMail({
+          from: process.env.GMAIL_USER || "noreply@topautoadvisors.com",
+          to: process.env.NOTIFICATION_EMAIL || process.env.GMAIL_USER || "info@topautoadvisors.com",
+          subject: `New Booking - ${bookingData.name}`,
+          html: `
+            <h2>New Service Booking</h2>
+            <p><strong>Name:</strong> ${bookingData.name}</p>
+            <p><strong>Email:</strong> ${bookingData.email}</p>
+            <p><strong>Phone:</strong> ${bookingData.phone}</p>
+            <p><strong>Service:</strong> ${bookingData.service}</p>
+            <p><strong>Preferred Date:</strong> ${bookingData.preferredDate}</p>
+            <p><strong>Preferred Time:</strong> ${bookingData.preferredTime}</p>
+            <p><strong>Vehicle Info:</strong> ${bookingData.vehicleInfo || 'Not provided'}</p>
+            <p><strong>Dealer Info:</strong> ${bookingData.dealerInfo || 'Not provided'}</p>
+            <p><strong>Notes:</strong> ${bookingData.additionalNotes || 'None'}</p>
+          `,
+        });
+
+        // Send confirmation to client
+        await transporter.sendMail({
+          from: process.env.GMAIL_USER || "noreply@topautoadvisors.com",
+          to: bookingData.email,
+          subject: "Booking Confirmation - Top Auto Advisors",
+          html: `
+            <h2>Thank you for booking with Top Auto Advisors!</h2>
+            <p>Hi ${bookingData.name},</p>
+            <p>We've received your booking request for ${bookingData.preferredDate} at ${bookingData.preferredTime}.</p>
+            <p>Our team will contact you within 24 hours to confirm your appointment and provide next steps.</p>
+            <p>Best regards,<br>Top Auto Advisors Team</p>
+          `,
+        });
+      } catch (emailError) {
+        console.error('Failed to send booking emails:', emailError);
+      }
+      
+      res.json({ success: true, message: "Booking confirmed" });
+    } catch (error: any) {
+      res.status(400).json({ message: "Booking failed: " + error.message });
+    }
+  });
+
   // Serve static download files
   app.get("/downloads/:filename", (req, res) => {
     const filename = req.params.filename;
