@@ -1,5 +1,6 @@
 import { Shield, Check, Clock, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "wouter";
 
 export default function PricingSection() {
   const features = [
@@ -42,15 +43,13 @@ export default function PricingSection() {
               ))}
             </ul>
             
-            <a
-              href="https://buy.stripe.com/test_dRmcN65lv48Z9UZfhp2cg00"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/booking"
               className="block w-full bg-white text-emerald font-bold py-4 rounded-xl text-center text-lg hover:bg-gray-100 transition-colors"
             >
               <Shield className="inline w-5 h-5 mr-2" />
               Get Protected Now
-            </a>
+            </Link>
           </div>
           
           {/* Regular Pricing */}
