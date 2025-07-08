@@ -1,0 +1,91 @@
+REBUILD HERO HEADER SECTION – FULL INSTRUCTIONS FOR RIVLET AGENT AI
+MANDATORY RESTRUCTURE:
+
+Rebuild the entire Hero Header section from scratch — both HTML and CSS must be cleaned, modular, and non-redundant. Do not patch the existing code. Rebuild the layout and styling from the ground up using clean semantic HTML, custom class names, and minimal inline styles.
+
+Why? We must avoid spaghetti code or quick patches that break on future updates. All components must be easily updatable and clearly separated for readability.
+
+✅ IMPLEMENT THESE CHANGES EXACTLY:
+FONT + SIZING
+
+Increase headline (h1) font size by 20–30%
+
+Make it bold, left-aligned on desktop, center on mobile
+
+Subheadline (p) should be 16–18px with ample line height
+
+NEW TEXT (REMOVE NAME, MAKE IT TEAM-BASED)
+Replace current subtext with:
+
+"Get insider protection from our team of ex-auto finance professionals. We've helped hundreds of buyers avoid thousands in scams, hidden fees, and dealer traps."
+
+GRAPHIC UPDATE
+
+DELETE the Google Search Console screenshot
+
+ADD a glowing, animated “Dealer-Proof Shield” badge centered or floating to the right of the text block
+
+Use subtle CSS glow animation, like:
+
+css
+Copiar
+Editar
+@keyframes glowPulse {
+  0% { box-shadow: 0 0 5px #00ffcc; }
+  50% { box-shadow: 0 0 25px #00ffcc; }
+  100% { box-shadow: 0 0 5px #00ffcc; }
+}
+Then apply it to the shield badge element.
+
+URGENT MESSAGE (TRUST BUILDING)
+Add this under the main heading:
+
+"Every 8 minutes, a first-time buyer gets scammed. Don’t be next."
+
+CTA BUTTONS (NO CHANGES)
+
+Keep both:
+
+"Get Protected Now – $49.99"
+
+"Watch How It Works"
+
+Ensure mobile responsiveness, button stack behavior, and hover animation is included
+
+INFO BULLETS (WITH ICONS)
+Replace current checkmarks with SVG icons for:
+
+Auto Finance Experts
+
+100% Online
+
+Same-Day Help
+
+🗂️ FOLDER + FILE STRUCTURE REQUIREMENTS
+sql
+Copiar
+Editar
+/hero-section/
+├── hero.html          → Contains only Hero Section HTML
+├── hero.css           → Contains only Hero Section styles
+├── assets/
+│   ├── shield.svg     → Dealer-Proof Shield badge
+│   └── icons/         → Folder for icons (SVGs)
+├── README.txt         → Explains file structure, component purpose, and update instructions
+📝 README.txt Example (Include This)
+css
+Copiar
+Editar
+TOP AUTO ADVISORS – HERO SECTION (README)
+
+📁 /hero-section/
+
+- hero.html → Main markup for Hero Header. Mobile responsive.
+- hero.css → Styles only for this section. Modular and reusable.
+- /assets/shield.svg → Dealer-Proof Shield icon.
+- /assets/icons/ → SVG icons for bullet features.
+
+✏️ To Update:
+- Text: Edit in hero.html under <div class="hero-text">
+- Shield Graphic: Replace shield.svg in assets/
+- Styles: All animations and layout in hero.css
