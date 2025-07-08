@@ -6,6 +6,7 @@ import Testimonials from "@/components/testimonials";
 import LeadMagnet from "@/components/lead-magnet";
 import PricingSection from "@/components/pricing-section";
 import ContactSection from "@/components/contact-section";
+import FAQSection from "@/components/faq-section";
 import Footer from "@/components/footer";
 import { Link } from "wouter";
 import { Shield, Users, Award, Clock } from "lucide-react";
@@ -36,41 +37,34 @@ export default function Home() {
       <Header />
       <HeroSection />
       
-      {/* Trust Indicators */}
+      {/* Trust Builders */}
       <section className="py-16 bg-light-gray border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-2xl font-bold text-navy mb-4">Trusted by Car Buyers Nationwide</h2>
-            <p className="text-gray-600">Join hundreds of satisfied clients who've saved thousands with our protection services</p>
+            <h2 className="text-2xl font-bold text-navy mb-4">Why Car Buyers Choose Us</h2>
+            <p className="text-gray-600">Real protection from ex-auto finance professionals</p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center justify-items-center">
             <div className="text-center">
               <div className="w-16 h-16 bg-emerald/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="h-8 w-8 text-emerald" />
+                <Clock className="h-8 w-8 text-emerald" />
               </div>
-              <div className="text-3xl font-bold text-navy">500+</div>
-              <div className="text-gray-600">Buyers Protected</div>
+              <div className="text-2xl font-bold text-emerald">24-Hour</div>
+              <div className="text-gray-600">Response Guarantee</div>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-emerald/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Shield className="h-8 w-8 text-emerald" />
               </div>
-              <div className="text-3xl font-bold text-emerald">$2.4M</div>
-              <div className="text-gray-600">Total Savings</div>
+              <div className="text-2xl font-bold text-navy">100%</div>
+              <div className="text-gray-600">Transparent Reviews</div>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-emerald/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Award className="h-8 w-8 text-emerald" />
+                <Users className="h-8 w-8 text-emerald" />
               </div>
-              <div className="text-3xl font-bold text-navy">98%</div>
-              <div className="text-gray-600">Satisfaction Rate</div>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-emerald/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Clock className="h-8 w-8 text-emerald" />
-              </div>
-              <div className="text-3xl font-bold text-emerald">24hr</div>
-              <div className="text-gray-600">Response Time</div>
+              <div className="text-2xl font-bold text-emerald">Ex-Finance</div>
+              <div className="text-gray-600">Pro Insider Advice</div>
             </div>
           </div>
         </div>
@@ -124,6 +118,25 @@ export default function Home() {
       <Testimonials />
       <LeadMagnet />
       <PricingSection />
+      
+      {/* Blog Section Placeholder */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold text-navy mb-4">Car Buying Insights</h2>
+          <div className="bg-white rounded-xl p-12 shadow-lg">
+            <div className="w-16 h-16 bg-emerald/10 rounded-full flex items-center justify-center mx-auto mb-6">
+              <Shield className="h-8 w-8 text-emerald" />
+            </div>
+            <h3 className="text-xl font-bold text-navy mb-4">Coming Soon</h3>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Real scam stories, car buying hacks, and negotiation tips from our team of ex-auto finance professionals. 
+              Get insider knowledge to protect yourself in the dealer showroom.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <FAQSection />
       <ContactSection />
       <Footer />
     </div>

@@ -88,8 +88,8 @@ export default function HeroSection() {
         .hero-section {
           position: relative;
           padding: 6rem 0 5rem;
-          background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 50%, #1d4ed8 100%);
-          color: white;
+          background: transparent;
+          color: #1e3a8a;
           overflow: hidden;
           min-height: 85vh;
           display: flex;
@@ -102,7 +102,7 @@ export default function HeroSection() {
           background-image: url('https://images.unsplash.com/photo-1493238792000-8113da705763?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
           background-size: cover;
           background-position: center;
-          opacity: 0.12;
+          opacity: 0.08;
         }
 
         .hero-container {
@@ -132,7 +132,7 @@ export default function HeroSection() {
           display: flex;
           align-items: center;
           gap: 0.75rem;
-          color: #6ee7b7;
+          color: #10b981;
           margin-bottom: 1.5rem;
         }
 
@@ -152,10 +152,11 @@ export default function HeroSection() {
           line-height: 1.1;
           margin-bottom: 1.5rem;
           letter-spacing: -0.02em;
+          color: #1e3a8a;
         }
 
         .hero-highlight {
-          color: #6ee7b7;
+          color: #ef4444;
         }
 
         .hero-urgent {
@@ -174,7 +175,7 @@ export default function HeroSection() {
         .hero-subheadline {
           font-size: 1.25rem;
           line-height: 1.6;
-          color: #bfdbfe;
+          color: #64748b;
           margin-bottom: 2.5rem;
           font-weight: 400;
         }
@@ -211,8 +212,8 @@ export default function HeroSection() {
         }
 
         .hero-btn-secondary {
-          border: 3px solid white;
-          color: white;
+          border: 3px solid #1e3a8a;
+          color: #1e3a8a;
           padding: 1.25rem 2.5rem;
           border-radius: 1rem;
           font-weight: 700;
@@ -225,8 +226,8 @@ export default function HeroSection() {
         }
 
         .hero-btn-secondary:hover {
-          background: white;
-          color: #1e3a8a;
+          background: #1e3a8a;
+          color: white;
           transform: translateY(-2px);
         }
 

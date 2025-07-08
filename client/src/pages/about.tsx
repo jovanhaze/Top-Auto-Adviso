@@ -46,8 +46,8 @@ export default function About() {
               About Top Auto Advisors
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We're on a mission to level the playing field between first-time car buyers 
-              and dealerships, ensuring every transaction is fair, transparent, and beneficial to you.
+              We're on a mission to protect first-time car buyers from dealer scams, hidden fees, 
+              and predatory practices. Every day without protection, buyers lose thousands to dealership manipulation.
             </p>
           </div>
         </div>
@@ -61,37 +61,40 @@ export default function About() {
               <h2 className="text-3xl font-bold text-navy mb-6">Our Story</h2>
               <div className="space-y-4 text-gray-700">
                 <p>
-                  Top Auto Advisors was founded after witnessing countless first-time car buyers 
-                  fall victim to predatory dealer practices. We saw families overpaying by thousands, 
-                  getting trapped in unfavorable financing, and walking away feeling defeated.
+                  Top Auto Advisors was founded by Jovan Acosta after witnessing countless first-time car buyers 
+                  fall victim to predatory dealer practices. With 5+ years in auto finance and collections, 
+                  he saw families overpaying by thousands, getting trapped in unfavorable financing, and walking away feeling defeated.
                 </p>
                 <p>
-                  Our founder, with over a decade of experience in automotive sales and consumer 
-                  advocacy, decided to bridge this knowledge gap. We believe that with the right 
-                  guidance and protection, anyone can navigate the car buying process successfully.
+                  What started as helping friends and family evolved into a mission: to protect every first-time buyer 
+                  from the manipulation tactics that cost people their savings. We believe that with insider knowledge 
+                  and professional guidance, anyone can avoid these costly traps.
                 </p>
                 <p>
-                  Today, we've helped hundreds of families save money, avoid scams, and drive away 
-                  with confidence. Every success story motivates us to continue fighting for fair 
-                  and transparent car buying experiences.
+                  <strong>The reality is harsh:</strong> Without protection, first-time buyers lose an average of $3,000-$5,000 
+                  to hidden fees, inflated prices, and predatory financing. Some lose their entire down payment to lemon cars 
+                  or get stuck with payments they can't afford.
+                </p>
+                <p>
+                  We're here to change that. Every consultation, every contract review, every piece of advice is designed 
+                  to save you thousands and give you the confidence to drive away with a fair deal.
                 </p>
               </div>
             </div>
-            <div className="bg-light-gray p-8 rounded-lg">
-              <h3 className="text-2xl font-bold text-navy mb-6">Our Mission</h3>
-              <p className="text-gray-700 mb-6">
-                To empower first-time car buyers with industry expertise, protecting them from costly 
-                mistakes and dealer manipulation while ensuring they get the best possible deal.
-              </p>
-              <div className="space-y-4">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-emerald">5+ Years</div>
-                  <div className="text-sm text-gray-600">Auto Finance Experience</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-navy">Nationwide</div>
-                  <div className="text-sm text-gray-600">Remote Service</div>
-                </div>
+            <div className="bg-gradient-to-br from-red-50 to-orange-50 p-8 rounded-lg border border-red-200">
+              <h3 className="text-2xl font-bold text-red-700 mb-6">⚠️ The Cost of Going Unprotected</h3>
+              <div className="space-y-4 text-gray-700">
+                <p className="font-semibold text-red-600">Every 8 minutes, a first-time buyer gets scammed.</p>
+                <ul className="space-y-2 text-sm">
+                  <li>• Hidden fees: $1,500-$3,000 extra</li>
+                  <li>• Inflated prices: $2,000-$5,000 above market value</li>
+                  <li>• Predatory financing: Years of unnecessary payments</li>
+                  <li>• Lemon cars: Thousands in repair costs</li>
+                  <li>• Dealer add-ons: $500-$2,000 in useless products</li>
+                </ul>
+                <p className="font-semibold text-red-700">
+                  Our $49.99 consultation can save you $3,000-$10,000. The math is simple.
+                </p>
               </div>
             </div>
           </div>

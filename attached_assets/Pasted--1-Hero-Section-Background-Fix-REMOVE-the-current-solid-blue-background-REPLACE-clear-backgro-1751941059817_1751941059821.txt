@@ -1,0 +1,92 @@
+ 1. Hero Section Background Fix
+REMOVE the current solid blue background.
+
+REPLACE  clear background so they can see the nice in the back 
+
+
+📊 3. "Trusted by Car Buyers Nationwide" Section – REMOVE OR REPLACE
+Remove any fake or inflated metrics:
+
+❌ “2.4M protected”
+
+❌ “98% success rate”
+
+❌ “500+ buyers served”
+
+Replace with more realistic trust builders or useful data like:
+
+✅ “24-hour response guarantee”
+
+✅ “100% transparent contract reviews”
+
+✅ “Insider advice from ex-auto finance pros”
+
+Keep icons, layout, and structure — just swap out the BS numbers.
+
+🧾 4. Add Missing Sections
+✅ Must Add:
+Blog Section
+
+Placeholder: “Coming Soon: Real scam stories, car buying hacks, and negotiation tips”
+
+ ADD THIS SECTION at bottom of home page above footer – “Frequently Asked Questions” (FAQ)
+Place it near the bottom of the homepage, right before or after the blog placeholder.
+
+🧱 SECTION STRUCTURE:
+Title: Frequently Asked Questions
+
+Layout: Accordion style (expand/collapse)
+
+Include the following 5 FAQs, styled with simple icons (like ❓ or car emoji) and bolded questions.
+
+✅ FAQ Content:
+1. ❓ What exactly do you do?
+We review your contract or offer before you sign anything, explain every fee, and help you avoid getting scammed. It’s like having an ex-dealer on your side.
+
+2. 📸 How do I send you my paperwork?
+Just text us a photo or upload it through our secure form. We accept photos, PDFs, screenshots — whatever you’ve got.
+
+3. 🕒 How fast do I get help?
+Most buyers get a same-day Zoom review — sometimes within the hour. We also offer emergency calls if you're stuck at the dealership.
+
+4. 🚨 Can you tell me if a car is a lemon?
+Yes. We’ll flag red flags like accident history, shady wording, or sketchy warranties. We’re not mechanics — but we know scam signals from miles away.
+
+5. 💸 Why is there a fee?
+Because this advice can save you $2,000 to $10,000. $49.99 is cheaper than any mistake you could make without it.
+
+🎨 DESIGN NOTES FOR RIVLET:
+Use expandable accordion design
+
+Add a small trust icon (checkmark, shield, or car emoji) next to each question
+
+Ensure mobile readability: large tap targets, no overflow
+
+➕ Optional Suggestions (add if space permits):
+Who We Help section
+
+Title: “Who We Work With”
+
+Bullets: First-time buyers, busy professionals, single parents, military/veterans, etc.
+
+Partnership/Trusted By Section
+
+Optional: Placeholder logos for affiliate agents, loan officers, etc.
+
+🧑‍💼 5. About Page – NEEDS WORK
+Expand the About page with:
+
+Your mission and what you believe in
+
+A short blurb about the risks of not having protection (e.g. getting stuck with a lemon, losing $5,000+ in hidden fees)
+
+Make it feel more human and protective — not corporate
+
+📐 6. Overall Layout Tweaks
+Hero section spacing feels slightly off
+
+Recheck padding, margins, and text centering
+
+Align major elements visually (especially on mobile)
+
+Make sure all buttons and sections are mobile responsive and not crammed

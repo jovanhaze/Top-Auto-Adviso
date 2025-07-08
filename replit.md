@@ -5,6 +5,14 @@ A conversion-optimized website for Top Auto Advisors, helping first-time car buy
 
 ## Recent Changes
 
+### Homepage Enhancement & Authenticity Update (2025-01-08)
+- Removed solid blue hero background for transparent design showing background image
+- Replaced fake metrics (500+ buyers, $2.4M savings, 98% rate) with authentic trust builders
+- Added comprehensive FAQ section with accordion design and 5 key questions
+- Added "Car Buying Insights" blog placeholder section
+- Updated hero text colors for better readability with new background
+- Improved mobile responsiveness and visual hierarchy throughout
+
 ### Logo and Branding Update (2025-01-08)
 - Replaced old logo with new professional car icon (no embedded text)
 - Updated slogan from "Buy Smart. Drive Safe." to "Drive Smart."
