@@ -1,14 +1,24 @@
 import { Shield, Users, Clock, CheckCircle } from "lucide-react";
 import { Link } from "wouter";
 
+/**
+ * Hero Section Component - Top Auto Advisors
+ * 
+ * Features:
+ * - 3-column responsive layout (Text | Shield & Features | Visual Space)
+ * - Animated dealer-proof shield with glow effect
+ * - Mobile-first responsive design
+ * - Conversion-optimized CTAs
+ * - Trust-building urgent messaging
+ */
 export default function HeroSection() {
   return (
     <section className="hero-section">
-      <div className="hero-background"></div>
+      <div className="hero-background" />
       
       <div className="hero-container">
         <div className="hero-layout">
-          {/* Text Block - Left 2/3 */}
+          {/* Text Block - Primary Content */}
           <div className="hero-text-block">
             <div className="hero-badge">
               <Shield className="hero-badge-icon" />
@@ -38,7 +48,7 @@ export default function HeroSection() {
             </div>
           </div>
           
-          {/* Shield & Features - Center */}
+          {/* Shield & Features - Visual Anchor */}
           <div className="hero-center-block">
             <div className="dealer-proof-shield">
               <Shield className="shield-icon" />
@@ -62,14 +72,19 @@ export default function HeroSection() {
             </div>
           </div>
           
-          {/* Visual Space - Right 1/3 */}
+          {/* Visual Space - Right Balance */}
           <div className="hero-visual-space">
-            <div className="hero-fade-overlay"></div>
+            <div className="hero-fade-overlay" />
           </div>
         </div>
       </div>
 
       <style>{`
+        /* ==========================================================================
+           HERO SECTION - TOP AUTO ADVISORS
+           3-Column Layout: Text | Shield & Features | Visual Space
+           ========================================================================== */
+
         .hero-section {
           position: relative;
           padding: 6rem 0 5rem;
@@ -105,7 +120,9 @@ export default function HeroSection() {
           min-height: 70vh;
         }
 
-        /* Text Block - Left 2/3 */
+        /* ==========================================================================
+           TEXT BLOCK - Primary Content Area (Left 2/3)
+           ========================================================================== */
         .hero-text-block {
           flex: 2;
           max-width: 600px;
@@ -218,7 +235,9 @@ export default function HeroSection() {
           height: 1.5rem;
         }
 
-        /* Shield & Features - Center */
+        /* ==========================================================================
+           SHIELD & FEATURES - Visual Anchor (Center)
+           ========================================================================== */
         .hero-center-block {
           flex: 1;
           display: flex;
@@ -314,7 +333,9 @@ export default function HeroSection() {
           font-weight: 600;
         }
 
-        /* Visual Space - Right 1/3 */
+        /* ==========================================================================
+           VISUAL SPACE - Right Balance (Right 1/3)
+           ========================================================================== */
         .hero-visual-space {
           flex: 1;
           height: 100%;
@@ -328,7 +349,9 @@ export default function HeroSection() {
           border-radius: 2rem;
         }
 
-        /* Mobile Responsiveness */
+        /* ==========================================================================
+           RESPONSIVE DESIGN - Mobile First Approach
+           ========================================================================== */
         @media (max-width: 1200px) {
           .hero-layout {
             flex-direction: column;
@@ -339,10 +362,12 @@ export default function HeroSection() {
           .hero-text-block {
             flex: none;
             max-width: none;
+            order: 1;
           }
 
           .hero-center-block {
             margin-left: 0;
+            order: 2;
           }
 
           .hero-headline {
@@ -357,6 +382,8 @@ export default function HeroSection() {
           .hero-features {
             flex-direction: row;
             justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
           }
 
           .hero-visual-space {
@@ -367,22 +394,36 @@ export default function HeroSection() {
         @media (max-width: 768px) {
           .hero-section {
             padding: 4rem 0 3rem;
+            min-height: auto;
           }
 
           .hero-container {
             padding: 0 1rem;
           }
 
+          .hero-layout {
+            gap: 2.5rem;
+          }
+
           .hero-headline {
             font-size: 2.125rem;
+            margin-bottom: 1rem;
           }
 
           .hero-subheadline {
             font-size: 1.125rem;
+            margin-bottom: 2rem;
+          }
+
+          .hero-urgent {
+            font-size: 0.9rem;
+            padding: 0.875rem 1.25rem;
+            margin-bottom: 1.5rem;
           }
 
           .hero-buttons {
             width: 100%;
+            gap: 0.75rem;
           }
 
           .hero-btn-primary,
@@ -404,30 +445,116 @@ export default function HeroSection() {
             min-height: 4rem;
           }
 
+          .shield-text {
+            font-size: 1rem;
+          }
+
+          .shield-subtext {
+            font-size: 0.8rem;
+          }
+
           .hero-features {
             flex-direction: column;
             align-items: center;
             gap: 1rem;
+            margin-top: 1.5rem;
           }
 
           .hero-feature {
             width: 100%;
-            max-width: 200px;
+            max-width: 280px;
+            padding: 0.875rem;
+          }
+
+          .hero-feature-icon {
+            width: 1.75rem;
+            height: 1.75rem;
+          }
+
+          .hero-feature span {
+            font-size: 0.875rem;
           }
         }
 
         @media (max-width: 640px) {
-          .hero-headline {
-            font-size: 2rem;
+          .hero-section {
+            padding: 3rem 0 2.5rem;
           }
 
           .hero-container {
             padding: 0 0.75rem;
           }
 
+          .hero-headline {
+            font-size: 2rem;
+            line-height: 1.2;
+          }
+
+          .hero-subheadline {
+            font-size: 1rem;
+            line-height: 1.5;
+          }
+
+          .hero-badge-text {
+            font-size: 1.125rem;
+          }
+
+          .hero-urgent {
+            font-size: 0.875rem;
+            padding: 0.75rem 1rem;
+          }
+
           .dealer-proof-shield {
             width: 180px;
             height: 180px;
+          }
+
+          .shield-icon {
+            min-width: 3.5rem;
+            min-height: 3.5rem;
+          }
+
+          .shield-text {
+            font-size: 0.9rem;
+          }
+
+          .shield-subtext {
+            font-size: 0.75rem;
+          }
+
+          .hero-feature {
+            max-width: 240px;
+            padding: 0.75rem;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .hero-headline {
+            font-size: 1.75rem;
+          }
+
+          .hero-subheadline {
+            font-size: 0.95rem;
+          }
+
+          .hero-btn-primary,
+          .hero-btn-secondary {
+            padding: 0.875rem 1.5rem;
+            font-size: 1rem;
+          }
+
+          .dealer-proof-shield {
+            width: 160px;
+            height: 160px;
+          }
+
+          .hero-features {
+            gap: 0.75rem;
+          }
+
+          .hero-feature {
+            max-width: 200px;
+            padding: 0.625rem;
           }
         }
       `}</style>
