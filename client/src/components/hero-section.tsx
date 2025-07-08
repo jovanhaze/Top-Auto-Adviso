@@ -7,8 +7,9 @@ export default function HeroSection() {
       <div className="hero-background"></div>
       
       <div className="hero-container">
-        <div className="hero-content">
-          <div className="hero-text">
+        <div className="hero-layout">
+          {/* Text Block - Left 2/3 */}
+          <div className="hero-text-block">
             <div className="hero-badge">
               <Shield className="hero-badge-icon" />
               <span className="hero-badge-text">100% Dealer-Trick Proof</span>
@@ -35,6 +36,15 @@ export default function HeroSection() {
                 Watch How It Works
               </Link>
             </div>
+          </div>
+          
+          {/* Shield & Features - Center */}
+          <div className="hero-center-block">
+            <div className="dealer-proof-shield">
+              <Shield className="shield-icon" />
+              <div className="shield-text">DEALER-PROOF</div>
+              <div className="shield-subtext">PROTECTION</div>
+            </div>
             
             <div className="hero-features">
               <div className="hero-feature">
@@ -52,12 +62,9 @@ export default function HeroSection() {
             </div>
           </div>
           
-          <div className="hero-visual">
-            <div className="dealer-proof-shield">
-              <Shield className="shield-icon" />
-              <div className="shield-text">DEALER-PROOF</div>
-              <div className="shield-subtext">PROTECTION</div>
-            </div>
+          {/* Visual Space - Right 1/3 */}
+          <div className="hero-visual-space">
+            <div className="hero-fade-overlay"></div>
           </div>
         </div>
       </div>
@@ -65,11 +72,11 @@ export default function HeroSection() {
       <style>{`
         .hero-section {
           position: relative;
-          padding: 5rem 0 4rem;
+          padding: 6rem 0 5rem;
           background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 50%, #1d4ed8 100%);
           color: white;
           overflow: hidden;
-          min-height: 80vh;
+          min-height: 85vh;
           display: flex;
           align-items: center;
         }
@@ -80,51 +87,54 @@ export default function HeroSection() {
           background-image: url('https://images.unsplash.com/photo-1493238792000-8113da705763?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
           background-size: cover;
           background-position: center;
-          opacity: 0.15;
+          opacity: 0.12;
         }
 
         .hero-container {
           position: relative;
-          max-width: 1200px;
+          max-width: 1400px;
           margin: 0 auto;
-          padding: 0 1rem;
+          padding: 0 2rem;
           width: 100%;
         }
 
-        .hero-content {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
+        .hero-layout {
+          display: flex;
           gap: 3rem;
           align-items: center;
+          min-height: 70vh;
         }
 
-        .hero-text {
-          text-align: left;
+        /* Text Block - Left 2/3 */
+        .hero-text-block {
+          flex: 2;
+          max-width: 600px;
         }
 
         .hero-badge {
           display: flex;
           align-items: center;
-          gap: 0.5rem;
+          gap: 0.75rem;
           color: #6ee7b7;
-          margin-bottom: 1rem;
+          margin-bottom: 1.5rem;
         }
 
         .hero-badge-icon {
-          width: 1.5rem;
-          height: 1.5rem;
+          width: 1.75rem;
+          height: 1.75rem;
         }
 
         .hero-badge-text {
-          font-size: 1.125rem;
-          font-weight: 600;
+          font-size: 1.25rem;
+          font-weight: 700;
         }
 
         .hero-headline {
-          font-size: 4.5rem;
-          font-weight: bold;
+          font-size: 3.75rem;
+          font-weight: 900;
           line-height: 1.1;
-          margin-bottom: 1rem;
+          margin-bottom: 1.5rem;
+          letter-spacing: -0.02em;
         }
 
         .hero-highlight {
@@ -132,21 +142,24 @@ export default function HeroSection() {
         }
 
         .hero-urgent {
-          background: rgba(239, 68, 68, 0.9);
+          background: rgba(239, 68, 68, 0.95);
           color: white;
-          padding: 0.75rem 1rem;
-          border-radius: 0.5rem;
-          font-weight: 600;
-          margin-bottom: 1.5rem;
+          padding: 1rem 1.5rem;
+          border-radius: 0.75rem;
+          font-weight: 700;
+          font-size: 1rem;
+          margin-bottom: 2rem;
           display: inline-block;
-          border-left: 4px solid #fbbf24;
+          border-left: 5px solid #fbbf24;
+          box-shadow: 0 4px 15px rgba(239, 68, 68, 0.3);
         }
 
         .hero-subheadline {
-          font-size: 1.125rem;
-          line-height: 1.7;
+          font-size: 1.25rem;
+          line-height: 1.6;
           color: #bfdbfe;
-          margin-bottom: 2rem;
+          margin-bottom: 2.5rem;
+          font-weight: 400;
         }
 
         .hero-buttons {
@@ -157,144 +170,188 @@ export default function HeroSection() {
         }
 
         .hero-btn-primary {
-          background: #10b981;
+          background: linear-gradient(145deg, #10b981, #059669);
           color: white;
-          padding: 1rem 2rem;
-          border-radius: 0.75rem;
-          font-weight: bold;
-          font-size: 1.125rem;
+          padding: 1.25rem 2.5rem;
+          border-radius: 1rem;
+          font-weight: 800;
+          font-size: 1.2rem;
           text-decoration: none;
           display: inline-flex;
           align-items: center;
-          gap: 0.5rem;
+          gap: 0.75rem;
           transition: all 0.3s ease;
           transform: scale(1);
-          box-shadow: 0 10px 30px rgba(16, 185, 129, 0.3);
+          box-shadow: 0 12px 35px rgba(16, 185, 129, 0.4);
           text-align: center;
           justify-content: center;
+          border: none;
         }
 
         .hero-btn-primary:hover {
-          background: #059669;
-          transform: scale(1.05);
-          box-shadow: 0 15px 40px rgba(16, 185, 129, 0.4);
+          transform: scale(1.05) translateY(-2px);
+          box-shadow: 0 20px 50px rgba(16, 185, 129, 0.5);
         }
 
         .hero-btn-secondary {
-          border: 2px solid white;
+          border: 3px solid white;
           color: white;
-          padding: 1rem 2rem;
-          border-radius: 0.75rem;
-          font-weight: 600;
-          font-size: 1.125rem;
+          padding: 1.25rem 2.5rem;
+          border-radius: 1rem;
+          font-weight: 700;
+          font-size: 1.2rem;
           text-decoration: none;
           transition: all 0.3s ease;
           text-align: center;
           display: inline-block;
+          background: transparent;
         }
 
         .hero-btn-secondary:hover {
           background: white;
           color: #1e3a8a;
+          transform: translateY(-2px);
         }
 
         .hero-btn-icon {
-          width: 1.25rem;
-          height: 1.25rem;
+          width: 1.5rem;
+          height: 1.5rem;
         }
 
-        .hero-features {
+        /* Shield & Features - Center */
+        .hero-center-block {
+          flex: 1;
           display: flex;
           flex-direction: column;
-          gap: 1rem;
-        }
-
-        .hero-feature {
-          display: flex;
           align-items: center;
-          gap: 0.75rem;
-          color: #bfdbfe;
-        }
-
-        .hero-feature-icon {
-          width: 1.25rem;
-          height: 1.25rem;
-          color: #6ee7b7;
-        }
-
-        .hero-visual {
-          display: flex;
-          justify-content: center;
-          align-items: center;
+          gap: 2rem;
         }
 
         .dealer-proof-shield {
           position: relative;
           background: linear-gradient(145deg, #10b981, #059669);
           border-radius: 50%;
-          width: 200px;
-          height: 200px;
+          width: 300px;
+          height: 300px;
           display: flex;
           flex-direction: column;
           align-items: center;
           justify-content: center;
-          animation: glowPulse 3s ease-in-out infinite;
-          box-shadow: 0 0 30px rgba(16, 185, 129, 0.5);
+          animation: glow 2.5s infinite ease-in-out;
+          box-shadow: 0 0 30px rgba(16, 185, 129, 0.6);
         }
 
-        @keyframes glowPulse {
-          0% { box-shadow: 0 0 20px #10b981; }
-          50% { box-shadow: 0 0 40px #10b981, 0 0 60px #10b981; }
-          100% { box-shadow: 0 0 20px #10b981; }
+        @keyframes glow {
+          0%, 100% { 
+            box-shadow: 0 0 20px #10b981, 0 0 40px rgba(16, 185, 129, 0.3); 
+            transform: scale(1);
+          }
+          50% { 
+            box-shadow: 0 0 40px #10b981, 0 0 80px rgba(16, 185, 129, 0.5); 
+            transform: scale(1.02);
+          }
         }
 
         .shield-icon {
-          width: 3rem;
-          height: 3rem;
+          width: 4rem;
+          height: 4rem;
           color: white;
-          margin-bottom: 0.5rem;
+          margin-bottom: 0.75rem;
         }
 
         .shield-text {
-          font-weight: bold;
-          font-size: 0.875rem;
+          font-weight: 900;
+          font-size: 1.1rem;
           color: white;
           text-align: center;
           line-height: 1;
+          letter-spacing: 0.05em;
         }
 
         .shield-subtext {
-          font-weight: 600;
-          font-size: 0.75rem;
+          font-weight: 700;
+          font-size: 0.9rem;
           color: #d1fae5;
           text-align: center;
+          letter-spacing: 0.1em;
+        }
+
+        .hero-features {
+          display: flex;
+          gap: 1.5rem;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+
+        .hero-feature {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 0.5rem;
+          color: #bfdbfe;
+          text-align: center;
+          padding: 1rem;
+          background: rgba(255, 255, 255, 0.1);
+          border-radius: 1rem;
+          backdrop-filter: blur(10px);
+          border: 1px solid rgba(255, 255, 255, 0.2);
+          min-width: 120px;
+        }
+
+        .hero-feature-icon {
+          width: 2rem;
+          height: 2rem;
+          color: #6ee7b7;
+        }
+
+        .hero-feature span {
+          font-size: 0.9rem;
+          font-weight: 600;
+        }
+
+        /* Visual Space - Right 1/3 */
+        .hero-visual-space {
+          flex: 1;
+          height: 100%;
+          position: relative;
+        }
+
+        .hero-fade-overlay {
+          position: absolute;
+          inset: 0;
+          background: linear-gradient(90deg, transparent 0%, rgba(16, 185, 129, 0.1) 100%);
+          border-radius: 2rem;
         }
 
         /* Mobile Responsiveness */
-        @media (max-width: 1024px) {
-          .hero-content {
-            grid-template-columns: 1fr;
-            gap: 2rem;
+        @media (max-width: 1200px) {
+          .hero-layout {
+            flex-direction: column;
+            gap: 3rem;
             text-align: center;
           }
 
-          .hero-text {
-            text-align: center;
+          .hero-text-block {
+            flex: none;
+            max-width: none;
           }
 
           .hero-headline {
             font-size: 3.5rem;
           }
 
-          .hero-buttons {
-            flex-direction: column;
-            align-items: center;
+          .dealer-proof-shield {
+            width: 250px;
+            height: 250px;
           }
 
           .hero-features {
             flex-direction: row;
             justify-content: center;
-            flex-wrap: wrap;
+          }
+
+          .hero-visual-space {
+            display: none;
           }
         }
 
@@ -303,8 +360,16 @@ export default function HeroSection() {
             padding: 4rem 0 3rem;
           }
 
+          .hero-container {
+            padding: 0 1rem;
+          }
+
           .hero-headline {
-            font-size: 2.5rem;
+            font-size: 2.125rem;
+          }
+
+          .hero-subheadline {
+            font-size: 1.125rem;
           }
 
           .hero-buttons {
@@ -314,21 +379,29 @@ export default function HeroSection() {
           .hero-btn-primary,
           .hero-btn-secondary {
             width: 100%;
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
           }
 
           .dealer-proof-shield {
-            width: 150px;
-            height: 150px;
+            width: 200px;
+            height: 200px;
           }
 
           .shield-icon {
-            width: 2rem;
-            height: 2rem;
+            width: 3rem;
+            height: 3rem;
           }
 
           .hero-features {
             flex-direction: column;
             align-items: center;
+            gap: 1rem;
+          }
+
+          .hero-feature {
+            width: 100%;
+            max-width: 200px;
           }
         }
 
@@ -339,6 +412,11 @@ export default function HeroSection() {
 
           .hero-container {
             padding: 0 0.75rem;
+          }
+
+          .dealer-proof-shield {
+            width: 180px;
+            height: 180px;
           }
         }
       `}</style>

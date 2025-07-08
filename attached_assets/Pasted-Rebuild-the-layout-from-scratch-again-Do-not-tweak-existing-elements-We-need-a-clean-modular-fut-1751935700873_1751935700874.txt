@@ -1,0 +1,83 @@
+Rebuild the layout from scratch again. Do not tweak existing elements. We need a clean, modular, future-proof rebuild of the Hero section using semantic HTML5 and scoped CSS.
+
+The current layout is visually imbalanced and still has issues with font hierarchy, spacing, and unused white space. Follow the instructions below precisely.
+
+✅ WHAT TO FIX:
+1. FONT SIZE & HIERARCHY
+Increase headline <h1> font size to at least 52–60px desktop / 34px mobile.
+
+Subheadline <p> should be 18–20px, with a strong line height (1.6).
+
+All fonts should follow this rule:
+
+“If it doesn’t punch hard or breathe easy, it’s too small.”
+
+2. BULLET ICONS ("Auto Finance Experts" etc.)
+These three bullets are way too small and isolated in the bottom left.
+
+Relocate them below the Dealer-Proof Shield in a horizontal layout on desktop and stacked on mobile.
+
+3. DEALER-PROOF SHIELD
+Increase its size by 1.5x and center it horizontally between the text block and right side of the screen.
+
+Add a subtle pulse-glow animation:
+
+css
+Copiar
+Editar
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 5px #00ffcc; }
+  50% { box-shadow: 0 0 20px #00ffcc; }
+}
+
+.shield {
+  animation: glow 2.5s infinite ease-in-out;
+}
+4. LAYOUT REBALANCE
+Reorganize this entire section into a 3-column flex layout (desktop):
+
+mathematica
+Copiar
+Editar
+| Text Block         | Shield & Badge           | Empty or fade overlay |
+Make the left 2/3 for text, shield and bullets. Right 1/3 can be transparent visual space or overlay fade.
+
+Mobile layout: Stack top-down: Text ➝ Shield ➝ Bullets ➝ CTAs.
+
+5. HTML FILE STRUCTURE (REQUIRED AGAIN)
+arduino
+Copiar
+Editar
+/hero-section-v2/
+├── hero.html
+├── hero.css
+├── assets/
+│   ├── shield.svg
+│   └── icons/ (auto.svg, calendar.svg, online.svg)
+├── README.txt
+📝 README.txt Template:
+css
+Copiar
+Editar
+TOP AUTO ADVISORS – HERO SECTION v2
+
+📁 /hero-section-v2/
+
+- hero.html → Hero markup
+- hero.css → Dedicated styles
+- /assets/icons → Icons for bullets
+- /assets/shield.svg → Dealer-Proof Shield icon
+
+✏️ UPDATE INSTRUCTIONS
+- To edit headline text → hero.html line 12–16
+- To update icon bullets → hero.html line 42–48
+- To replace shield → swap shield.svg inside /assets/
+📣 FINAL DESIGN INTENT (SUMMARY TO FOLLOW)
+Headline should dominate visually.
+
+Shield must anchor the center-right visually, not float in dead space.
+
+Bullet list adds trust + clarity and should be fully visible on all screen sizes.
+
+Buttons should be responsive and clickable across all devices.
+
