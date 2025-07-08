@@ -225,6 +225,8 @@ export default function HeroSection() {
           flex-direction: column;
           align-items: center;
           gap: 2rem;
+          margin-left: 8%;
+          justify-content: center;
         }
 
         .dealer-proof-shield {
@@ -253,10 +255,13 @@ export default function HeroSection() {
         }
 
         .shield-icon {
-          width: 4rem;
-          height: 4rem;
+          width: 60%;
+          height: auto;
           color: white;
           margin-bottom: 0.75rem;
+          display: block;
+          min-width: 6rem;
+          min-height: 6rem;
         }
 
         .shield-text {
@@ -336,6 +341,10 @@ export default function HeroSection() {
             max-width: none;
           }
 
+          .hero-center-block {
+            margin-left: 0;
+          }
+
           .hero-headline {
             font-size: 3.5rem;
           }
@@ -389,8 +398,10 @@ export default function HeroSection() {
           }
 
           .shield-icon {
-            width: 3rem;
-            height: 3rem;
+            width: 55%;
+            height: auto;
+            min-width: 4rem;
+            min-height: 4rem;
           }
 
           .hero-features {
