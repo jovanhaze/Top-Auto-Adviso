@@ -12,7 +12,7 @@ export default function Footer() {
               </div>
               <div>
                 <h3 className="text-xl font-bold">Top Auto Advisors</h3>
-                <p className="text-blue-200 text-sm">Buy Smart. Drive Safe.</p>
+                <p className="text-blue-200 text-sm">Drive Smart.</p>
               </div>
             </div>
             <p className="text-blue-100 text-sm">

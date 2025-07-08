@@ -1,7 +1,7 @@
 import { Shield, Menu, X } from "lucide-react";
 import { Link, useLocation } from "wouter";
 import { useState } from "react";
-import logoPath from "@assets/WhatsApp Image 2025-06-08 at 9.52.12 AM_1749412348873.jpeg";
+import carLogoPath from "@assets/topautoadvisors-car-icon-centered_1751939753490.png";
 
 export default function Header() {
   const [location] = useLocation();
@@ -20,14 +20,17 @@ export default function Header() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3">
-            <img 
-              src={logoPath} 
-              alt="Top Auto Advisors Logo" 
-              className="w-10 h-10 rounded-full object-cover"
-            />
-            <div>
-              <h1 className="text-xl font-bold text-navy">Top Auto Advisors</h1>
-              <p className="text-xs text-gray-600">Buy Smart. Drive Safe.</p>
+            <div className="w-12 h-8 flex-shrink-0 bg-transparent">
+              <img 
+                src={carLogoPath} 
+                alt="Top Auto Advisors Car Icon" 
+                className="w-full h-full object-contain"
+                style={{ filter: 'drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1))' }}
+              />
+            </div>
+            <div className="flex flex-col justify-center">
+              <h1 className="text-xl font-bold text-navy leading-tight">Top Auto Advisors</h1>
+              <p className="text-xs text-gray-600 leading-tight mt-0.5">Drive Smart.</p>
             </div>
           </Link>
 

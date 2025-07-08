@@ -1,0 +1,29 @@
+<svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .car-body { fill: #1e3a8a; }
+    </style>
+  </defs>
+  
+  <!-- Car silhouette based on the uploaded image -->
+  <path class="car-body" d="M20 85 L25 70 Q30 50 50 45 L70 43 Q90 40 120 40 Q140 40 160 43 L180 45 Q190 50 185 70 L180 85 
+           L175 90 Q170 95 160 95 L150 95 Q145 100 140 100 L60 100 Q55 100 50 95 L40 95 Q30 95 25 90 Z"/>
+  
+  <!-- Windshield -->
+  <path fill="white" d="M50 50 Q70 45 90 45 L130 45 Q150 45 170 50 L165 65 Q140 60 100 60 Q80 60 55 65 Z"/>
+  
+  <!-- Front grille -->
+  <rect fill="white" x="85" y="75" width="30" height="8" rx="4"/>
+  
+  <!-- Headlights -->
+  <ellipse fill="white" cx="35" cy="75" rx="8" ry="6"/>
+  <ellipse fill="white" cx="165" cy="75" rx="8" ry="6"/>
+  
+  <!-- Side mirrors -->
+  <ellipse fill="#1e3a8a" cx="25" cy="65" rx="4" ry="3"/>
+  <ellipse fill="#1e3a8a" cx="175" cy="65" rx="4" ry="3"/>
+  
+  <!-- Front bumper details -->
+  <rect fill="white" x="25" y="90" width="12" height="4" rx="2"/>
+  <rect fill="white" x="163" y="90" width="12" height="4" rx="2"/>
+</svg>
